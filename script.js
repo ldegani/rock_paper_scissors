@@ -27,7 +27,7 @@ function game() {
   // and store it in a variable all in lower case
   const computerChoice = getComputerChoice() // stores the computer choice in a variable to be used
 
-  console.log(`Player has chosen ${playerChoice}`)
+  console.log(`Player has chosen ${playerChoice}`)  // message in the console to show the players choice
   console.log(`Computer has chosen ${computerChoice}`)  // message in the console to know the choices made for the round
   playRound(computerChoice, playerChoice)  // uses the variables in the function to see who won
   console.log(`
@@ -35,7 +35,7 @@ function game() {
   Player: ${playerScore} points.
   Computer: ${computerScore} points.
   Draws: ${drawScore}.
-  `)  // actualized score
+  `)  // shows actualized score
 
   // condition to check if the game has ended
   if (counter === 5) {
