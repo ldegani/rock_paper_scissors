@@ -1,0 +1,108 @@
+body {
+  margin: 0 330px;
+  color: #FFD700;
+  background-color: #00296B;
+  text-align: center;
+}
+
+.game,
+.game-infos {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.enemy-infos,
+.end-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+  width: 180px;
+}
+
+.game-buttons,
+.enemy-infos,
+.scoreboard-container,
+.end-game  {
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+.game-buttons,
+.scoreboard-container {
+  min-width: 360px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto; 
+}
+
+.game-infos {
+  margin: 24px 0;
+}
+
+.end-game {
+  padding: 12px 0;
+  gap: 18px;
+}
+
+span {
+  font-weight: 800;
+  padding: 12px;
+}
+
+.rounds,
+.rules {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+
+/* Buttons Style */
+
+button,
+#enemy-img,
+#end-img  {
+  background-color: #00509D;
+  border: 1px solid #0f0f0f;
+  border-radius: 8px;
+  padding: 10px 15px;
+  box-shadow: 2px 2px #0f0f0f;
+}
+
+button:hover {
+  border: 1px solid #FFD700;
+  transform: scale(1.02);
+}
+
+button:active {
+  background-color: #3FA7D6;
+  box-shadow: 2px 2px #333745;
+  transform: translateY(2px) translateX(2px);
+}
+
+button:disabled {
+  background-color: #333745;
+  box-shadow: 2px 2px #333745;
+  transform: translateY(0px) translateX(0px);
+}
+
+button:disabled:hover {
+  border: 1px solid #0f0f0f;
+  transform: scale(1);
+}
+
+#enemy-img {
+  margin-bottom: 0px;
+}
+
+.btnPlayAgain.on {
+  color: #FFD700;
+  border: 2px solid #FFD700;
+}

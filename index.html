@@ -5,9 +5,57 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors</title>
-  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  
+  <div class="header">
+    <h1>!!!The Vikings Game!!!</h1>
+    <p class="header-rules">You are fighting for your survival in the old land of the Vikings!<br>
+      The rules are simple - you choose your warrior, your enemy will choose theirs.<br>
+      Who ever wins 5 battles, will have the victory!</p>
+    <p class="rules">
+      Odin beats Valkyrie | Valkyrie beats Warlord | Warlord beats Odin
+    </p>
+  </div>
+
+  <div class="game">
+    <div class="game-buttons">
+      <span class="player">Your Choice:</span>
+      <div id="buttons">
+        <div class="game-button-character">
+          <button type="button" id="btnOne" class="btnGame"><img src="./images/odin.png" width="50" height="50"></button>
+          <p>Odin</p>
+        </div>
+        <div class="game-button-character">
+          <button type="button" id="btnTwo" class="btnGame"><img src="./images/valkyrie.png" width="50" height="50"></button>
+          <p>Valkyrie</p>  
+        </div>
+        <div class="game-button-character">
+          <button type="button" id="btnThree" class="btnGame"s><img src="./images/warlord.png" width="50" height="50"></button>
+          <p>Warlord</p>
+        </div>
+      </div>
+    </div>
+    <div class="enemy-infos">
+      <span class="enemy">Enemy Choice:</span>
+      <img id="enemy-img" src="./images/loot.png" width="50" height="50">
+      <p class="enemy-choice">-</p>
+    </div>
+  </div>
+
+  <div class="game-infos">
+    <div class="scoreboard-container">
+      <p class="rounds">Round: 0</p>
+      <p class="wins">Your Wins: 0 | Enemy Wins: 0 | Draws: 0</p>
+      <p class="end-message"> - </p>
+    </div>
+    <div class="end-game">
+      <img id="end-img" src="./images/sword.png" width="50" height="50">
+      <button type="button" class="btnPlayAgain" disabled>Play Again</button>
+    </div>
+  </div>
+
+  <!--- https://www.flaticon.com/packs/viking-58 -->
 </body>
 </html>
