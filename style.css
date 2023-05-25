@@ -1,8 +1,13 @@
 body {
-  margin: 0 330px;
+  font-family: 'Allerta Stencil';
   color: #FFD700;
   background-color: #00296B;
   text-align: center;
+}
+
+header,
+main { 
+  margin: 0 330px;
 }
 
 .game,
@@ -12,10 +17,18 @@ body {
   gap: 30px;
 }
 
-#buttons {
+#buttons,
+.medias,
+.medias-icons  {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 30px;
+}
+
+.medias,
+.medias-icons {
+  gap: 15px;
 }
 
 .enemy-infos,
@@ -63,6 +76,17 @@ span {
   font-weight: 800;
 }
 
+.social-p {
+  margin: 8px 0;
+}
+
+a {
+  color: #FFD700;
+}
+
+footer {
+  border-top: 1px solid #0f0f0f;
+}
 
 /* Buttons Style */
 

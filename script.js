@@ -1,3 +1,4 @@
+// JavaScript DOM selectors
 const playerSelection = document.querySelectorAll(".btnGame");
 const rounds = document.querySelector(".rounds");
 const btnPlayAgain = document.querySelector(".btnPlayAgain")
@@ -8,6 +9,7 @@ let computerScore = 0;
 let drawScore = 0;
 let roundsCounter = 0;
 
+// main game function
 function playGame () {
   let playerChoice;
   playerSelection.forEach((selection) => {
@@ -42,6 +44,7 @@ function changeComputerInfo(computerChoice) {
   var img = document.getElementById("enemy-img");
   const enemyChoice = document.querySelector(".enemy-choice");  
 
+// take the computer choice and changes the image and text
   if (computerChoice === "odin") {
     img.src = "./images/odin.png";
     enemyChoice.innerText = "Odin"
@@ -58,7 +61,8 @@ function changeComputerInfo(computerChoice) {
 function playRound(computerChoice, playerChoice) {
   rounds.innerText = `Round: ${roundsCounter}`
 
-  if (playerChoice === "odin" && computerChoice === "valkyrie" || playerChoice === "valkyrie" && computerChoice === "warlord" || playerChoice === "warlord" && computerChoice === "odin") {
+// checks who wins and give the score to the right variable
+  if ((playerChoice === "odin" && computerChoice === "valkyrie") || (playerChoice === "valkyrie" && computerChoice === "warlord") || (playerChoice === "warlord" && computerChoice === "odin")) {
     playerScore++;
   } else if (playerChoice === computerChoice) {
     drawScore++;
@@ -70,7 +74,7 @@ function playRound(computerChoice, playerChoice) {
   wins.innerText = `Your Wins: ${playerScore} | Enemy Wins: ${computerScore} | Draws: ${drawScore}`
 }
 
-// function to get the final message with the total score
+// function for making final changes when the game ends
 function endGame() {
   var img = document.getElementById("end-img");
   const message = document.querySelector(".end-message")
@@ -80,9 +84,11 @@ function endGame() {
     selection.setAttribute('disabled', '');
   })
 
+// changes the attributes of the PLAY AGAIN button to make it work
   btnPlayAgain.removeAttribute('disabled', '');
   btnPlayAgain.classList.add('on')
 
+// see who won and change the buttons and messages
   if (playerScore === 5) {
     img.src = "./images/valhalla.png";
     img.style.border = "2px solid #FFD700"
@@ -94,6 +100,7 @@ function endGame() {
   }
 }
 
+// function to make the PLAY AGAIN button refresh the page
 function resetGame() {
   btnPlayAgain.addEventListener('click', () => {
     window.location.reload();
